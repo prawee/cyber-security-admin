@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { prisma } from "~/lib/db.server";
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,7 +9,21 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader = async () => {
+  return await prisma.user.findMany();
+};
+
 export default function Index() {
+  const users = useLoaderData();
+  console.log('users ', users);
+  const renderLogs = () => (
+    <div className="text-white bg-gray-800 p-5 mb-10">
+      <pre className="text-green-500">
+        {JSON.stringify(users, null, 4)}
+      </pre>
+    </div>
+  )
+
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="flex flex-col items-center">
@@ -21,6 +37,7 @@ export default function Index() {
             </span>
           </div>
         </header>
+        {renderLogs()}
         <nav className="flex flex-col items-center gap-4 justify-center rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
           <p className="leading-6 text-gray-700 dark:text-gray-200">
             What&apos;s contains?
