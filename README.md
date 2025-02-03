@@ -2,6 +2,12 @@
 
 This is source code for leaning about frontend
 
+## Database
+```bash
+npx prisma db push
+npx prisma studio
+```
+
 ## Development
 
 Run the dev server:
