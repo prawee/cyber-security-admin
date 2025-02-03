@@ -2,35 +2,28 @@ import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Cyber Security - Admin" },
+    { name: "description", content: "Welcome to Cyber Security Admin!" },
   ];
 };
 
 export default function Index() {
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-16">
+      <div className="flex flex-col items-center">
         <header className="flex flex-col items-center gap-9">
           <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
+            Welcome to <span className="sr-only">Cyber Security Admin</span>
           </h1>
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Remix"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
-            />
+          <div className="h-[200px] w-[800px]">
+            <span className="flex justify-center w-full text-orange-500 text-7xl font-bold">
+              Cyber Security Admin
+            </span>
           </div>
         </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
+        <nav className="flex flex-col items-center gap-4 justify-center rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
           <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
+            What&apos;s contains?
           </p>
           <ul>
             {resources.map(({ href, text, icon }) => (
@@ -55,8 +48,8 @@ export default function Index() {
 
 const resources = [
   {
-    href: "https://remix.run/start/quickstart",
-    text: "Quick Start (5 min)",
+    href: "",
+    text: "Remix",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -76,8 +69,8 @@ const resources = [
     ),
   },
   {
-    href: "https://remix.run/start/tutorial",
-    text: "Tutorial (30 min)",
+    href: "",
+    text: "Prisma",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +90,8 @@ const resources = [
     ),
   },
   {
-    href: "https://remix.run/docs",
-    text: "Remix Docs",
+    href: "",
+    text: "SQLite",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -117,8 +110,8 @@ const resources = [
     ),
   },
   {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
+    href: "",
+    text: "Vite",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
