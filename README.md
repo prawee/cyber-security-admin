@@ -2,6 +2,8 @@
 
 This is source code for leaning about frontend
 
+![cover](public/images/cover.png?raw=true)
+
 ## Database
 ```bash
 npx prisma db push
