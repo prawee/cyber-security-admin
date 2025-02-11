@@ -1,6 +1,17 @@
 # Cyber Security (Admin)
 
 This is source code for leaning about frontend
+## Clone
+```bash
+git clone https://github.com/prawee/cyber-security-admin.git
+cd cyber-security-admin
+npm install
+```
+
+## Security
+```bash
+cp env.simple .env
+```
 
 ## Database
 ```bash
